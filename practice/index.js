@@ -47,4 +47,50 @@ console.log("undefined",typeof firstName);
 let lastName = null;
 console.log("Null",typeof lastName);
 
+// filter 
+const words = ['react', 'script', 'interview', 'style', 'javascript']
+const ans = words.filter((word) => word.length > 6)
+console.log(ans)
 
+// without the array method
+
+let newArray = []
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i].length > 6) {
+    newArray.push(words[i])
+  }
+}
+console.log(newArray);
+
+// this 
+console.log("window this",this)
+
+// here this is pointing object
+function myFunction() {
+    console.log(this)     
+  }
+ 
+const obj = {
+  bool: true,
+  myFunction: myFunction,
+}
+
+obj.myFunction(); // window
+
+// here this refers to object itself
+const student_1 =  {
+    name: 'AJ',
+    displayName1: function displayName() {
+        console.log(this.name)
+    }
+}
+const student_2 =  {
+    name: 'RajKumar',
+    displayName2: function displayName() {
+        console.log(this.name)
+    }
+}
+
+student_1.displayName1()
+student_2.displayName2()
