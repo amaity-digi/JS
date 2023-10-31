@@ -94,3 +94,30 @@ const student_2 =  {
 
 student_1.displayName1()
 student_2.displayName2()
+
+for (let i = 0; i < 5; i++) {
+    setTimeout(function() { console.log(i); }, i * 1000 );
+  }
+
+
+  console.log(1 < 2 < 3);
+console.log(3 > 2 > 1);
+
+var b = 1;
+function outer(){
+   	var b = 2
+    function inner(){
+        b++;
+        var b = 3;
+        console.log(b)
+    }
+    inner();
+}
+outer();
+
+// How do you clone an object?
+
+let obj1 = {a: 1 ,b: 2}
+let objclone = Object.assign({},obj1);
+console.log("clone", objclone)
+
